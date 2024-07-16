@@ -2,6 +2,7 @@ const header = document.querySelector('#header');
 const leftSideBar = document.querySelector('#sidenav-left-container');
 const rightSideBar = document.querySelector('#sidenav-right-container');
 const memesSection = document.querySelector('#memes-section');
+const musicSection = document.querySelector('#music-section');
 
 //Username submission
 const usernameForm = document.querySelector('#user-information');
@@ -11,8 +12,7 @@ usernameForm.addEventListener('submit', (event) => {
   event.preventDefault();
   username = userNameInput.value;
   usernameForm.classList.add('hidden');
-
-  usernameContainer.append(`Welcome ${username}`);
+  usernameContainer.append(`${username}`);
 });
 
 //Random Joke Functionality
@@ -90,6 +90,7 @@ dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
 
 //Add Memes to DOM functionality
+/*
 fetch('http://localhost:3000/data/')
   .then((response) => response.json())
   .then((memesData) => {
@@ -115,3 +116,33 @@ fetch('http://localhost:3000/data/')
       memesSection.appendChild(memeContainer);
     });
   });
+*/
+//Adds Music to DOM functionality
+/*
+fetch('http://localhost:3000/tracks')
+  .then((response) => response.json())
+  .then((musicData) => {
+    musicData.forEach((musicDetails) => {
+      console.log(musicDetails);
+      let musicContainer = document.createElement('div');
+      musicContainer.classList.add('music-container');
+
+      let musicName = document.createElement('p');
+      musicName.textContent = musicDetails.name;
+      musicName.classList.add('music-name');
+      musicContainer.appendChild(musicName);
+
+      let musicThumbnail = document.createElement('img');
+      musicThumbnail.setAttribute('src', musicDetails.img);
+      musicThumbnail.classList.add('music-image');
+      musicContainer.appendChild(musicThumbnail);
+
+      let commentInput = document.createElement('input');
+      commentInput.setAttribute('type', 'text');
+      commentInput.classList.add('comment-input');
+      musicContainer.appendChild(commentInput);
+
+      musicSection.appendChild(musicContainer);
+    });
+  });
+*/
