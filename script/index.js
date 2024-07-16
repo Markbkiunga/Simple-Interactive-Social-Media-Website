@@ -25,7 +25,6 @@ function fetchRandomFriend() {
   fetch('https://randomuser.me/api/')
     .then((response) => response.json())
     .then((friendData) => {
-      console.log(friendData.results[0]);
       let friendImage = document.createElement('img');
       friendImage.setAttribute('src', friendData.results[0].picture.medium);
       friendsContainer.appendChild(friendImage);
@@ -42,6 +41,21 @@ function fetchRandomFriend() {
 fetchRandomFriend();
 fetchRandomFriend();
 fetchRandomFriend();
+
+//Random Technology related Quote
+const quoteContainer = document.querySelector('#quote-container');
+fetch('https://api.quotable.io/quotes/random?tags=technology')
+  .then((response) => response.json())
+  .then((quoteData) => {
+    console.log(quoteData[0]);
+    let quote = document.createElement('p');
+    quote.textContent = `"${quoteData[0].content}"`;
+    quoteContainer.appendChild(quote);
+
+    let quoteAuthor = document.createElement('p');
+    quoteAuthor.textContent = `~${quoteData[0].author}~`;
+    quoteContainer.appendChild(quoteAuthor);
+  });
 
 //Date and time functionality
 const now = new Date(); // create a new `Date` object
