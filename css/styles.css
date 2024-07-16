@@ -98,3 +98,22 @@ body {
   color: grey;
   font-size: small;
 }
+#memes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meme-image {
+  width: 500px;
+  height: 500px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.meme-container {
+  border: solid 5px black;
+  border-radius: 30px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.meme-name {
+}

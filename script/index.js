@@ -2,6 +2,7 @@
 const header = document.querySelector('#header');
 const leftSideBar = document.querySelector('#sidenav-left-container');
 const rightSideBar = document.querySelector('#sidenav-right-container');
+const memesSection = document.querySelector('#memes-section');
 
 fetch(
   'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart'
@@ -76,3 +77,24 @@ dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
 
 //Add Memes to DOM functionality
+fetch('http://localhost:3000/data/')
+  .then((response) => response.json())
+  .then((memesData) => {
+    memesData.memes.forEach((memeData) => {
+      console.log(memeData);
+      let memeContainer = document.createElement('div');
+      memeContainer.classList.add('meme-container');
+
+      let memeImage = document.createElement('img');
+      memeImage.setAttribute('src', memeData.url);
+      memeImage.classList.add('meme-image');
+      memeContainer.appendChild(memeImage);
+
+      let memeName = document.createElement('p');
+      memeName.textContent = memeData.name;
+      memeName.classList.add('meme-name');
+      memeContainer.appendChild(memeName);
+
+      memesSection.appendChild(memeContainer);
+    });
+  });
