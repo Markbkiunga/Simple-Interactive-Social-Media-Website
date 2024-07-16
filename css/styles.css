@@ -28,6 +28,7 @@ body {
 }
 
 #sidenav-left-container a:hover {
+  cursor: pointer;
   color: white;
 }
 
@@ -52,4 +53,19 @@ body {
 }
 .section-headings {
   text-align: center;
+}
+#form-container {
+  padding: 15px;
+}
+#username {
+  background-color: black;
+  color: grey;
+}
+#submit-button {
+  background-color: black;
+  color: grey;
+}
+#submit-button:hover {
+  cursor: pointer;
+  color: white;
 }
