@@ -88,6 +88,9 @@ body {
   justify-content: center;
   color: grey;
 }
+#friends-container h4 {
+  color: whitesmoke;
+}
 #friends-container img {
   border-radius: 50%;
 }

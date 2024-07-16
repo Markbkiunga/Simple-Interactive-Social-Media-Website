@@ -74,3 +74,5 @@ const currentDateTime = now.toLocaleString(); // get the current date and time a
 let dateTime = document.createElement('p');
 dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
+
+//Add Memes to DOM functionality
