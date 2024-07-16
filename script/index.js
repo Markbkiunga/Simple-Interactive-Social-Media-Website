@@ -18,3 +18,35 @@ fetch(
     jokeDelivery.classList.add('joke');
     header.appendChild(jokeDelivery);
   });
+
+//Random 3 Friends Functionality
+let friendsContainer = document.querySelector('#friends-container');
+function fetchRandomFriend() {
+  fetch('https://randomuser.me/api/')
+    .then((response) => response.json())
+    .then((friendData) => {
+      console.log(friendData.results[0]);
+      let friendImage = document.createElement('img');
+      friendImage.setAttribute('src', friendData.results[0].picture.medium);
+      friendsContainer.appendChild(friendImage);
+
+      let friendName = document.createElement('p');
+      friendName.textContent = `${friendData.results[0].name.title} ${friendData.results[0].name.first} ${friendData.results[0].name.last}`;
+      friendsContainer.appendChild(friendName);
+
+      let friendUsername = document.createElement('p');
+      friendUsername.textContent = `${friendData.results[0].login.username}`;
+      friendsContainer.appendChild(friendUsername);
+    });
+}
+fetchRandomFriend();
+fetchRandomFriend();
+fetchRandomFriend();
+
+//Date and time functionality
+const now = new Date(); // create a new `Date` object
+const currentDateTime = now.toLocaleString(); // get the current date and time as a string
+let dateTime = document.createElement('p');
+dateTime.textContent = currentDateTime;
+rightSideBar.appendChild(dateTime);
+console.log(currentDateTime); // output: "7/20/2021, 2:28:15 PM" (will vary depending on your time zone)

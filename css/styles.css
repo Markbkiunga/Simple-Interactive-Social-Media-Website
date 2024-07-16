@@ -44,6 +44,13 @@ body {
   padding-top: 20px;
 }
 
+#sidenav-right-container p {
+  color: whitesmoke;
+  font-size: small;
+  font-weight: bold;
+  text-align: end;
+}
+
 #header {
   color: white;
   background-color: black;
@@ -73,4 +80,18 @@ body {
   margin-left: 18px;
   font-size: x-small;
   color: whitesmoke;
+}
+#friends-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+}
+#friends-container img {
+  border-radius: 50%;
+}
+#friends-container p {
+  color: grey;
+  font-size: small;
 }
