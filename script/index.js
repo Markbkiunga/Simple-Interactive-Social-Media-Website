@@ -85,15 +85,20 @@ fetch('http://localhost:3000/data/')
       let memeContainer = document.createElement('div');
       memeContainer.classList.add('meme-container');
 
+      let memeName = document.createElement('p');
+      memeName.textContent = memeData.name;
+      memeName.classList.add('meme-name');
+      memeContainer.appendChild(memeName);
+
       let memeImage = document.createElement('img');
       memeImage.setAttribute('src', memeData.url);
       memeImage.classList.add('meme-image');
       memeContainer.appendChild(memeImage);
 
-      let memeName = document.createElement('p');
-      memeName.textContent = memeData.name;
-      memeName.classList.add('meme-name');
-      memeContainer.appendChild(memeName);
+      let commentInput = document.createElement('input');
+      commentInput.setAttribute('type', 'text');
+      commentInput.classList.add('comment-input');
+      memeContainer.appendChild(commentInput);
 
       memesSection.appendChild(memeContainer);
     });

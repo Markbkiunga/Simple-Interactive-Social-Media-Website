@@ -106,14 +106,22 @@ body {
 .meme-image {
   width: 500px;
   height: 500px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 .meme-container {
+  display: flex;
+  flex-direction: column;
   border: solid 5px black;
   border-radius: 30px;
   margin-bottom: 100px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .meme-name {
+  font-size: medium;
+}
+.comment-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
 }
