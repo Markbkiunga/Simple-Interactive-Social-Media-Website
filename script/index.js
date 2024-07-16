@@ -47,7 +47,6 @@ const quoteContainer = document.querySelector('#quote-container');
 fetch('https://api.quotable.io/quotes/random?tags=technology')
   .then((response) => response.json())
   .then((quoteData) => {
-    console.log(quoteData[0]);
     let quote = document.createElement('p');
     quote.textContent = `"${quoteData[0].content}"`;
     quoteContainer.appendChild(quote);
@@ -57,10 +56,21 @@ fetch('https://api.quotable.io/quotes/random?tags=technology')
     quoteContainer.appendChild(quoteAuthor);
   });
 
+//Display GeoData Functionality
+const geoDataContainer = document.querySelector('#geo-data-container');
+fetch('https://ipapi.co/json/')
+  .then((response) => response.json())
+  .then((geoData) => {
+    let userGeoData = document.createElement('p');
+    userGeoData.innerHTML = `
+    </br>
+    ${geoData.country_name} </br> ${geoData.city} </br> ${geoData.org} </br> ${geoData.ip} </br> ${geoData.timezone}
+    `;
+    geoDataContainer.appendChild(userGeoData);
+  });
 //Date and time functionality
 const now = new Date(); // create a new `Date` object
 const currentDateTime = now.toLocaleString(); // get the current date and time as a string
 let dateTime = document.createElement('p');
 dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
-console.log(currentDateTime); // output: "7/20/2021, 2:28:15 PM" (will vary depending on your time zone)
