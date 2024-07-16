@@ -61,6 +61,9 @@ body {
 .section-headings {
   text-align: center;
 }
+.hidden {
+  display: none;
+}
 #form-container {
   padding: 15px;
 }

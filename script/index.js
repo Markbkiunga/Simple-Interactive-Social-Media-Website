@@ -1,3 +1,12 @@
+//Username submission
+const usernameForm = document.querySelector('#user-information');
+const userNameInput = document.querySelector('#username');
+usernameForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  username = userNameInput.value;
+  usernameForm.classList.add('hidden');
+});
+
 //Random Joke Functionality
 const header = document.querySelector('#header');
 const leftSideBar = document.querySelector('#sidenav-left-container');
@@ -26,13 +35,13 @@ function fetchRandomFriend() {
   fetch('https://randomuser.me/api/')
     .then((response) => response.json())
     .then((friendData) => {
-      let friendImage = document.createElement('img');
-      friendImage.setAttribute('src', friendData.results[0].picture.medium);
-      friendsContainer.appendChild(friendImage);
-
       let friendName = document.createElement('p');
       friendName.textContent = `${friendData.results[0].name.title} ${friendData.results[0].name.first} ${friendData.results[0].name.last}`;
       friendsContainer.appendChild(friendName);
+
+      let friendImage = document.createElement('img');
+      friendImage.setAttribute('src', friendData.results[0].picture.medium);
+      friendsContainer.appendChild(friendImage);
 
       let friendUsername = document.createElement('p');
       friendUsername.textContent = `${friendData.results[0].login.username}`;
@@ -81,7 +90,6 @@ fetch('http://localhost:3000/data/')
   .then((response) => response.json())
   .then((memesData) => {
     memesData.memes.forEach((memeData) => {
-      console.log(memeData);
       let memeContainer = document.createElement('div');
       memeContainer.classList.add('meme-container');
 
