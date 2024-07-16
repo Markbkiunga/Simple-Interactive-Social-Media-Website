@@ -1,17 +1,21 @@
-//Username submission
-const usernameForm = document.querySelector('#user-information');
-const userNameInput = document.querySelector('#username');
-usernameForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  username = userNameInput.value;
-  usernameForm.classList.add('hidden');
-});
-
-//Random Joke Functionality
 const header = document.querySelector('#header');
 const leftSideBar = document.querySelector('#sidenav-left-container');
 const rightSideBar = document.querySelector('#sidenav-right-container');
 const memesSection = document.querySelector('#memes-section');
+
+//Username submission
+const usernameForm = document.querySelector('#user-information');
+const userNameInput = document.querySelector('#username');
+const usernameContainer = document.querySelector('#username-container');
+usernameForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  username = userNameInput.value;
+  usernameForm.classList.add('hidden');
+
+  usernameContainer.append(`Welcome ${username}`);
+});
+
+//Random Joke Functionality
 
 fetch(
   'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart'
