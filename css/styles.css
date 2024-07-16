@@ -1,0 +1,52 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin-left: 300px; /* Same as the width of the sidenav-left-container */
+  margin-right: 300px; /* Same as the width of the sidenav-right-container*/
+  padding: 0px 10px;
+  font-size: xx-large;
+  background-color: whitesmoke;
+}
+
+#sidenav-left-container {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#sidenav-left-container a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: grey;
+  display: block;
+}
+
+#sidenav-left-container a:hover {
+  color: white;
+}
+
+#sidenav-right-container {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#header {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 50px;
+  font-size: 15px;
+}
