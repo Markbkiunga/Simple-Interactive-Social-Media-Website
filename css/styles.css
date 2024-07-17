@@ -151,11 +151,24 @@ body {
 .meme-name {
   font-size: medium;
 }
-.comment-input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 50%;
+.comments-container {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+  justify-content: space-around;
 }
+.comment-input {
+  width: 50%;
+  border-radius: 5px;
+}
+.comment-button {
+  border-radius: 5px;
+}
+.comment-button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .music-container {
   display: flex;
   flex-direction: column;

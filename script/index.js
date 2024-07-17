@@ -105,10 +105,19 @@ fetch('http://localhost:3000/data/')
       memeImage.classList.add('meme-image');
       memeContainer.appendChild(memeImage);
 
+      let commentContainer = document.createElement('div');
+      commentContainer.classList.add('comments-container');
+      memeContainer.appendChild(commentContainer);
+
       let commentInput = document.createElement('input');
       commentInput.setAttribute('type', 'text');
       commentInput.classList.add('comment-input');
-      memeContainer.appendChild(commentInput);
+      commentContainer.appendChild(commentInput);
+
+      let addCommentButton = document.createElement('button');
+      addCommentButton.textContent = 'Add Comment';
+      addCommentButton.classList.add('comment-button');
+      commentContainer.appendChild(addCommentButton);
 
       //Liking a meme Event Listener
       memeImage.addEventListener('dblclick', () => {
@@ -122,6 +131,9 @@ fetch('http://localhost:3000/data/')
       memesSection.appendChild(memeContainer);
     });
   });
+
+//Commenting functionality
+
 //Adds Music to DOM functionality
 /*
 fetch('http://localhost:3000/tracks')
