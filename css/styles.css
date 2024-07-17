@@ -154,3 +154,21 @@ body {
 .music-name {
   font-size: large;
 }
+#dogs-section {
+  margin: 2rem;
+}
+.dog {
+  border: black solid 10px;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  display: inline-grid;
+  margin: 3rem 3rem;
+  box-shadow: 3px 4px grey;
+}
+
+.dog-image {
+  justify-self: center;
+  height: 250px;
+  width: 250px;
+}

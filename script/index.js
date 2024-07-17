@@ -3,6 +3,7 @@ const leftSideBar = document.querySelector('#sidenav-left-container');
 const rightSideBar = document.querySelector('#sidenav-right-container');
 const memesSection = document.querySelector('#memes-section');
 const musicSection = document.querySelector('#music-section');
+const dogSection = document.querySelector('#dogs-section');
 
 //Username submission
 const usernameForm = document.querySelector('#user-information');
@@ -146,3 +147,19 @@ fetch('http://localhost:3000/tracks')
     });
   });
 */
+// //Adds 40 Random Dogs to DOM functionality
+// fetch('https://dog.ceo/api/breeds/image/random/40')
+//   .then((response) => response.json())
+//   .then((dogData) => {
+//     let dogs = dogData.message;
+//     dogs.forEach((dog) => {
+//       let dogContainer = document.createElement('div');
+//       dogContainer.classList.add('dog');
+//       dogSection.appendChild(dogContainer);
+
+//       let dogImage = document.createElement('img');
+//       dogImage.setAttribute('src', dog);
+//       dogImage.classList.add('dog-image');
+//       dogContainer.appendChild(dogImage);
+//     });
+//   });
