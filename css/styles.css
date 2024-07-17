@@ -68,7 +68,17 @@ body {
 #header p {
   font-size: large;
 }
-
+#new-joke-button {
+  background-color: black;
+  color: white;
+  border: solid 3px white;
+  border-radius: 5px;
+}
+#new-joke-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
 .section-headings {
   text-align: center;
 }
