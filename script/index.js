@@ -86,7 +86,6 @@ const currentDateTime = now.toLocaleString(); // get the current date and time a
 let dateTime = document.createElement('p');
 dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
-/*
 //Add Memes to DOM functionality
 fetch('http://localhost:3000/memes')
   .then((response) => response.json())
@@ -152,7 +151,6 @@ fetch('http://localhost:3000/memes')
       memesSection.appendChild(memeContainer);
     });
   });
-*/
 //Adds Music to DOM functionality
 fetch('http://localhost:3000/tracks')
   .then((response) => response.json())
@@ -182,19 +180,19 @@ fetch('http://localhost:3000/tracks')
       musicSection.appendChild(musicContainer);
     });
   });
-// //Adds 40 Random Dogs to DOM functionality
-// fetch('https://dog.ceo/api/breeds/image/random/40')
-//   .then((response) => response.json())
-//   .then((dogData) => {
-//     let dogs = dogData.message;
-//     dogs.forEach((dog) => {
-//       let dogContainer = document.createElement('div');
-//       dogContainer.classList.add('dog');
-//       dogSection.appendChild(dogContainer);
+//Adds 40 Random Dogs to DOM functionality
+fetch('https://dog.ceo/api/breeds/image/random/40')
+  .then((response) => response.json())
+  .then((dogData) => {
+    let dogs = dogData.message;
+    dogs.forEach((dog) => {
+      let dogContainer = document.createElement('div');
+      dogContainer.classList.add('dog');
+      dogSection.appendChild(dogContainer);
 
-//       let dogImage = document.createElement('img');
-//       dogImage.setAttribute('src', dog);
-//       dogImage.classList.add('dog-image');
-//       dogContainer.appendChild(dogImage);
-//     });
-//   });
+      let dogImage = document.createElement('img');
+      dogImage.setAttribute('src', dog);
+      dogImage.classList.add('dog-image');
+      dogContainer.appendChild(dogImage);
+    });
+  });
