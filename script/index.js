@@ -173,9 +173,10 @@ fetch('http://localhost:3000/tracks')
       musicContainer.appendChild(musicThumbnail);
 
       let musicLink = document.createElement('a');
+      musicLink.classList.add('music-link');
       musicLink.setAttribute('href', musicDetails.trackUrl);
       musicLink.setAttribute('target', '_blank');
-      musicLink.textContent = 'Link';
+      musicLink.textContent = 'Link to Youtube';
       musicContainer.appendChild(musicLink);
 
       musicSection.appendChild(musicContainer);

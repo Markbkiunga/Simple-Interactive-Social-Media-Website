@@ -185,6 +185,16 @@ body {
 .music-name {
   font-size: large;
 }
+.music-link {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+}
+.music-link:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
 #dogs-section {
   margin: 2rem;
 }
