@@ -86,7 +86,7 @@ const currentDateTime = now.toLocaleString(); // get the current date and time a
 let dateTime = document.createElement('p');
 dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
-
+/*
 //Add Memes to DOM functionality
 fetch('http://localhost:3000/memes')
   .then((response) => response.json())
@@ -152,9 +152,8 @@ fetch('http://localhost:3000/memes')
       memesSection.appendChild(memeContainer);
     });
   });
-
+*/
 //Adds Music to DOM functionality
-/*
 fetch('http://localhost:3000/tracks')
   .then((response) => response.json())
   .then((musicData) => {
@@ -173,15 +172,15 @@ fetch('http://localhost:3000/tracks')
       musicThumbnail.classList.add('music-image');
       musicContainer.appendChild(musicThumbnail);
 
-      let commentInput = document.createElement('input');
-      commentInput.setAttribute('type', 'text');
-      commentInput.classList.add('comment-input');
-      musicContainer.appendChild(commentInput);
+      let musicLink = document.createElement('a');
+      musicLink.setAttribute('href', musicDetails.trackUrl);
+      musicLink.setAttribute('target', '_blank');
+      musicLink.textContent = 'Link';
+      musicContainer.appendChild(musicLink);
 
       musicSection.appendChild(musicContainer);
     });
   });
-*/
 // //Adds 40 Random Dogs to DOM functionality
 // fetch('https://dog.ceo/api/breeds/image/random/40')
 //   .then((response) => response.json())
