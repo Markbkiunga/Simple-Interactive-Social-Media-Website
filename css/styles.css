@@ -64,10 +64,11 @@ body {
   padding: 50px;
   font-size: 15px;
 }
-
-#header p {
-  font-size: large;
+.joke-container {
+  font-size: medium;
+  font-family: cursive;
 }
+
 #new-joke-button {
   background-color: black;
   color: white;
@@ -99,11 +100,6 @@ body {
 #submit-button:hover {
   cursor: pointer;
   color: white;
-}
-.joke {
-  margin-left: 18px;
-  font-size: small;
-  color: whitesmoke;
 }
 #friends-container {
   display: flex;
