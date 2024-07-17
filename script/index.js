@@ -132,7 +132,7 @@ fetch('http://localhost:3000/memes')
             Accept: 'application/json',
           },
           body: JSON.stringify({
-            captions: `${usernameContainer.textContent}:${commentInput.value} `,
+            captions: `${usernameContainer.textContent}:)${commentInput.value} `,
           }),
         })
           .then((response) => response.json())

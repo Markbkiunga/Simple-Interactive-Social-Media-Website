@@ -17,6 +17,7 @@ body {
   background-color: black;
   overflow-x: hidden;
   padding-top: 20px;
+  border-right: solid 3px grey;
 }
 #username-container {
   text-decoration: none;
@@ -48,6 +49,7 @@ body {
   background-color: black;
   overflow-x: hidden;
   padding-top: 20px;
+  border-left: solid 3px grey;
 }
 
 #sidenav-right-container p {
