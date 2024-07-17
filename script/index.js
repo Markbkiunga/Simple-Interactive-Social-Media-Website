@@ -91,7 +91,6 @@ dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
 
 //Add Memes to DOM functionality
-/*
 fetch('http://localhost:3000/data/')
   .then((response) => response.json())
   .then((memesData) => {
@@ -114,10 +113,18 @@ fetch('http://localhost:3000/data/')
       commentInput.classList.add('comment-input');
       memeContainer.appendChild(commentInput);
 
+      //Liking a meme Event Listener
+      memeImage.addEventListener('dblclick', () => {
+        if (memeContainer.className === 'meme-container') {
+          memeContainer.classList.add('meme-container-liked');
+        } else {
+          memeContainer.classList.remove('meme-container-liked');
+        }
+      });
+
       memesSection.appendChild(memeContainer);
     });
   });
-*/
 //Adds Music to DOM functionality
 /*
 fetch('http://localhost:3000/tracks')

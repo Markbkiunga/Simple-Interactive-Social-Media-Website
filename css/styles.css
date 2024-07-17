@@ -132,6 +132,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+.meme-container-liked {
+  display: flex;
+  flex-direction: column;
+  border: solid 5px red;
+  border-radius: 30px;
+  margin-bottom: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 .meme-name {
   font-size: medium;
 }
