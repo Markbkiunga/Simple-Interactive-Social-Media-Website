@@ -87,7 +87,7 @@ let dateTime = document.createElement('p');
 dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
 //Add Memes to DOM functionality
-fetch('http://localhost:3000/memes')
+fetch('https://memes-data-backend.vercel.app/memes')
   .then((response) => response.json())
   .then((memesData) => {
     memesData.forEach((memeData) => {
@@ -124,7 +124,7 @@ fetch('http://localhost:3000/memes')
       memeContainer.appendChild(memeCaption);
       //Changing Caption Event Listener
       addCommentButton.addEventListener('click', () => {
-        fetch(`http://localhost:3000/memes/${memeData.id}`, {
+        fetch(`https://memes-data-backend.vercel.app/memes/${memeData.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
