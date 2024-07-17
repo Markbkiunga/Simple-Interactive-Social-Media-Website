@@ -88,10 +88,10 @@ dateTime.textContent = currentDateTime;
 rightSideBar.appendChild(dateTime);
 
 //Add Memes to DOM functionality
-fetch('http://localhost:3000/data/')
+fetch('http://localhost:3000/memes')
   .then((response) => response.json())
   .then((memesData) => {
-    memesData.memes.forEach((memeData) => {
+    memesData.forEach((memeData) => {
       let memeContainer = document.createElement('div');
       memeContainer.classList.add('meme-container');
 
@@ -115,16 +115,29 @@ fetch('http://localhost:3000/data/')
       commentsContainer.appendChild(commentInput);
 
       let addCommentButton = document.createElement('button');
-      addCommentButton.textContent = 'Add Comment';
+      addCommentButton.textContent = 'Change Caption';
       addCommentButton.classList.add('comment-button');
       commentsContainer.appendChild(addCommentButton);
-      //Commenting Event Listener
+
+      let memeCaption = document.createElement('p');
+      memeCaption.classList.add('meme-caption');
+      memeCaption.textContent = memeData.captions;
+      memeContainer.appendChild(memeCaption);
+      //Changing Caption Event Listener
       addCommentButton.addEventListener('click', () => {
-        console.log(memeData.id);
-        fetch(`http://localhost:3000/data/memes/${memeData.id}`)
+        fetch(`http://localhost:3000/memes/${memeData.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            captions: `${usernameContainer.textContent}:${commentInput.value} `,
+          }),
+        })
           .then((response) => response.json())
-          .then((memeData) => {
-            console.log(memeData);
+          .then((userCaption) => {
+            console.log(userCaption);
           });
       });
       //Liking a meme Event Listener

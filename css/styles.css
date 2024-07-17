@@ -168,7 +168,9 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-
+.meme-caption {
+  font-size: smaller;
+}
 .music-container {
   display: flex;
   flex-direction: column;
