@@ -104,21 +104,29 @@ fetch('http://localhost:3000/data/')
       memeImage.setAttribute('src', memeData.url);
       memeImage.classList.add('meme-image');
       memeContainer.appendChild(memeImage);
-
-      let commentContainer = document.createElement('div');
-      commentContainer.classList.add('comments-container');
-      memeContainer.appendChild(commentContainer);
+      //Commenting functionality
+      let commentsContainer = document.createElement('div');
+      commentsContainer.classList.add('comments-container');
+      memeContainer.appendChild(commentsContainer);
 
       let commentInput = document.createElement('input');
       commentInput.setAttribute('type', 'text');
       commentInput.classList.add('comment-input');
-      commentContainer.appendChild(commentInput);
+      commentsContainer.appendChild(commentInput);
 
       let addCommentButton = document.createElement('button');
       addCommentButton.textContent = 'Add Comment';
       addCommentButton.classList.add('comment-button');
-      commentContainer.appendChild(addCommentButton);
-
+      commentsContainer.appendChild(addCommentButton);
+      //Commenting Event Listener
+      addCommentButton.addEventListener('click', () => {
+        console.log(memeData.id);
+        fetch(`http://localhost:3000/data/memes/${memeData.id}`)
+          .then((response) => response.json())
+          .then((memeData) => {
+            console.log(memeData);
+          });
+      });
       //Liking a meme Event Listener
       memeImage.addEventListener('dblclick', () => {
         if (memeContainer.className === 'meme-container') {
@@ -131,8 +139,6 @@ fetch('http://localhost:3000/data/')
       memesSection.appendChild(memeContainer);
     });
   });
-
-//Commenting functionality
 
 //Adds Music to DOM functionality
 /*
