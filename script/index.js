@@ -156,7 +156,6 @@ fetch('https://music-data-backend.vercel.app/tracks')
   .then((response) => response.json())
   .then((musicData) => {
     musicData.forEach((musicDetails) => {
-      console.log(musicDetails);
       let musicContainer = document.createElement('div');
       musicContainer.classList.add('music-container');
 
