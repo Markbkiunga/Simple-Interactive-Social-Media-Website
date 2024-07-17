@@ -152,7 +152,7 @@ fetch('https://memes-data-backend.vercel.app/memes')
     });
   });
 //Adds Music to DOM functionality
-fetch('http://localhost:3000/tracks')
+fetch('https://music-data-backend.vercel.app/tracks')
   .then((response) => response.json())
   .then((musicData) => {
     musicData.forEach((musicDetails) => {
