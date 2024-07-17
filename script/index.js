@@ -138,6 +138,7 @@ fetch('https://memes-data-backend.vercel.app/memes')
           .then((userCaption) => {
             console.log(userCaption);
           });
+        setTimeout(() => location.reload(), 1000);
       });
       //Liking a meme Event Listener
       memeImage.addEventListener('dblclick', () => {
