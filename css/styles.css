@@ -426,3 +426,225 @@ body {
     font-size: small;
   }
 }
+/*Smaller phone...more margin left*/
+@media screen and (max-width: 375px) {
+  #opennavbar-buttons-container {
+    border-radius: 10px;
+    display: flex;
+    background-color: black;
+    position: fixed;
+    top: 10;
+    width: 300px;
+  }
+  #sidenav-left-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-left-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: block;
+  }
+
+  /* Style the button that is used to open the sidenav */
+  body {
+    margin-left: 50px;
+    margin-right: 0px;
+    font-size: large;
+    overflow-x: hidden;
+  }
+  #sidenav-right-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-right-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+    display: block;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+    display: block;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  .meme-image {
+    width: 250px;
+    height: 250px;
+  }
+  .meme-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px black;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .meme-container-liked {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px red;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .meme-name {
+    font-size: medium;
+  }
+  .comments-container {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .comment-input {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .comment-button {
+    border-radius: 5px;
+  }
+  .comment-button:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .meme-caption {
+    font-size: small;
+  }
+}
+/*smaller screen...0 margin-left*/
+@media screen and (max-width: 320px) {
+  #opennavbar-buttons-container {
+    border-radius: 10px;
+    display: flex;
+    background-color: black;
+    position: fixed;
+    top: 10;
+    width: 300px;
+  }
+  #sidenav-left-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-left-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: block;
+  }
+
+  /* Style the button that is used to open the sidenav */
+  body {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: large;
+    overflow-x: hidden;
+  }
+  #sidenav-right-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-right-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+    display: block;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+    display: block;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  .meme-image {
+    width: 250px;
+    height: 250px;
+  }
+  .meme-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px black;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .meme-container-liked {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px red;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .meme-name {
+    font-size: medium;
+  }
+  .comments-container {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .comment-input {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .comment-button {
+    border-radius: 5px;
+  }
+  .comment-button:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .meme-caption {
+    font-size: small;
+  }
+}
