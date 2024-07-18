@@ -246,7 +246,6 @@ for (var i = 0; i < buttons.length; i++) {
   });
 }
   */
-//Collapse attempt two
 /* Set the width of the sidebar to 250px (show it) */
 function openLeftNav() {
   leftSideBar.style.width = '300px';
