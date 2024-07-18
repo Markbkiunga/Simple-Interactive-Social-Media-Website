@@ -86,6 +86,11 @@ Click on a navigation link of choice in the left navigation bar to navigate to i
 
 Click on the floating Whatsapp Icon at the bottom-right of the website then click on Chat on Whatsapp.
 
+##### To scroll through memes
+
+Scroll using the mouse or scroll bar.
+_One can move from one meme to the next by pressing the space-bar.(I don't know why this worked tbh)_
+
 ##### To like a meme
 
 Double click on a meme image.
@@ -96,6 +101,7 @@ _To undo liking, double click the meme image once more._
 ##### To change a meme's caption
 
 Enter text into the input field below a meme and click on change caption.
+_One can Enter text then press tab to select the button then press ENTER/RETURN to change the caption._
 </br>
 
 _With the username logged in,the username will be appended to the beginning of the caption_
