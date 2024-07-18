@@ -17,10 +17,23 @@
   -->
     <!--Font Awesome icons-->
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <!-- Backfired Collapsible Navbar Resources-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
     </head>
     <body>
-    <div id="sidenav-left-container">
+      <!-- 
+      Backfired collapsible navbar
+      <nav class="navbar navbar-inverse">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidenav-left-container">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          </div> -->
+      <div id="sidenav-left-container">
         <div id="form-container">
         <form id="user-information" method="post" >
             <input type="text" name="Username" id="username" placeholder="Enter username" required>
@@ -31,6 +44,7 @@
         <div id="username-container">
         </div>
         </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>   <!--X button-->
         <a href="#header">Header</a>
         <a href="#memes-section">Memes</a>
         <a href="#music-section">Music</a>
@@ -39,8 +53,9 @@
         <div class="elfsight-app-ee1b7185-968f-4651-8d99-dce62929efee" data-elfsight-app-lazy></div>
 
 
-    </div>
+      </div>
     <div id="sidenav-right-container">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()">&times;</a>   <!--X button-->
 
             <div id="friends-container" >
             <h4>Friend Suggestions</h4>
@@ -53,6 +68,11 @@
             </div>
 
     </div>
+    <div id="opennavbar-buttons-container">
+      <button class="openbtn" onclick="openLeftNav()">&#9776; Open Left Navbar</button>
+      <button class="openbtn" onclick="openRightNav()">&#9776; Open Right Navbar</button>
+      </div>
+    
     <header id="header">
         <h1>Simple Interactive Social Media Website</h1>
         <p>By Mark Brian</p>
@@ -67,14 +87,14 @@
       <button class="btn" onclick="filterSelection('random-dogs')"> Random Dogs</button>
     </div>
   -->
-    
-    <section id="memes-section" class="filterDiv memes">
+
+    <section id="memes-section">
         <h1 class="section-headings">Memes</h1>
     </section>
-    <section id="music-section" class="filterDiv music">
+    <section id="music-section">
         <h1 class="section-headings">Music</h1>
     </section>
-    <section id="dogs-section" class="filterDiv random-dogs">
+    <section id="dogs-section">
         <h1 class="section-headings">Random Dogs</h1>
     </section>
 

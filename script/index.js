@@ -246,3 +246,21 @@ for (var i = 0; i < buttons.length; i++) {
   });
 }
   */
+//Collapse attempt two
+/* Set the width of the sidebar to 250px (show it) */
+function openLeftNav() {
+  leftSideBar.style.width = '300px';
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeLeftNav() {
+  leftSideBar.style.width = '0';
+}
+function openRightNav() {
+  rightSideBar.style.width = '300px';
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeRightNav() {
+  rightSideBar.style.width = '0';
+}

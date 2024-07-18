@@ -9,6 +9,9 @@ body {
 .hidden {
   display: none;
 }
+#opennavbar-buttons-container {
+  display: none;
+}
 #sidenav-left-container {
   height: 100%;
   width: 300px;
@@ -242,4 +245,64 @@ body {
   justify-self: center;
   height: 250px;
   width: 250px;
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 768px) {
+  #opennavbar-buttons-container {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 10;
+    margin-left: 150px;
+  }
+  #sidenav-left-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-left-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  /* Style the button that is used to open the sidenav */
+  body {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: large;
+  }
+  #sidenav-right-container {
+    width: 0; /* 0 width - change this with JavaScript */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  #sidenav-right-container .closebtn {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
 }
