@@ -5,6 +5,26 @@ const memesSection = document.querySelector('#memes-section');
 const musicSection = document.querySelector('#music-section');
 const dogSection = document.querySelector('#dogs-section');
 
+//Loader
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Simulate an API request or any async operation
+  setTimeout(() => {
+    hideLoader();
+    showContent();
+  }, 2000); // Replace with your actual data loading logic and time
+
+  function hideLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+  }
+
+  function showContent() {
+    const content = document.getElementById('content');
+    content.style.display = 'block';
+  }
+});
+
 //Username submission
 const usernameForm = document.querySelector('#user-information');
 const userNameInput = document.querySelector('#username');
